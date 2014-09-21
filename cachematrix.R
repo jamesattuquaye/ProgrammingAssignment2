@@ -40,8 +40,8 @@ cacheSolve <- function(x, ...) {
 
 # Now we try the code to see if it works
 # First we set a matrix x and cache its inverse
-# We then try compute the inverse of the same matrix a second time.
-# We would expect it to retrieve the inverse from the cache
+# We then compute the inverse of the same matrix for the second time.
+# However becaue the inverse has been computed previously, we would expect it to retrieve the inverse from the cache
 
 x <- matrix(rnorm(100), 10)
 m  <-  makeCacheMatrix(x)
@@ -51,5 +51,6 @@ cacheSolve(m) # We observe that it retrieves the inverse from the cache the seco
 
 
 #################### References ######################
-# In this code I have used help from the exmaple on assigment webpage 
-# https://class.coursera.org/rprog-007/human_grading/view/courses/972580/assessments/3/submissions
+# In this code I have used help from the exmaple on the assignment webpage
+# the example on the page caches the mean of a vector 
+# https://github.com/rdpeng/ProgrammingAssignment2
